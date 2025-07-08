@@ -1095,7 +1095,6 @@ th {
   cursor: default;
   -webkit-transform: translateY(-40px);
   transform: translateY(-40px);
-  -webkit-backface-visibility: hidden;
   -webkit-transition-property: -webkit-transform;
   transition-property: transform;
   -webkit-transition-duration: 0.3s;
@@ -1377,6 +1376,7 @@ th {
 }
 #billboard {
   margin-top: 50px;
+  position: absolute;
 }
 
 /* 4.3 Icon Box - Company Services
@@ -1526,6 +1526,7 @@ select#input-sort {
 /*----------------------------------------------*/
 .thumb-swiper .swiper-slide {
   height: auto;
+   
 }
 
 .swiper-slide-thumb-active img {
@@ -1535,6 +1536,8 @@ select#input-sort {
 .product-info del {
   color: var(--gray-color-500);
 }
+
+
 
 /*---- Product Tabs ----------*/
 .nav-tabs .nav-link {
@@ -2063,6 +2066,7 @@ select#input-sort {
     transition: right var(--transition-slow);
     box-shadow: -10px 0 30px var(--shadow-color);
     border-left: 1px solid var(--border-color);
+    margin-top: 50px;
   }
 
   .nav-active .nav-menu {
@@ -2083,6 +2087,7 @@ select#input-sort {
     width: 100%;
     padding: 1rem;
     border-bottom: 1px solid var(--border-color);
+
   }
 
   .nav-link.active::after {
@@ -2096,6 +2101,8 @@ select#input-sort {
   .dropdown {
     position: static;
     width: 100%;
+    max-height: 500px;
+    overflow-y: auto;
     background: rgba(0, 0, 0, 0.2);
     border: none;
     padding: 0;
@@ -2188,7 +2195,7 @@ select#input-sort {
 
 /* Header */
 .img-fluid {
-  width: 350px;
+  width: 300px;
 }
 
 .banner-content h2 {
@@ -2220,8 +2227,19 @@ select#input-sort {
   font-weight: 500;
 }
 
+
+.card {
+  align-items: center;
+  width: 300px;
+  background: none;
+  /* margin-left: 35px; */
+  margin: auto;
+
+}
+
 .card .img-fluid {
-  height: 350px;
+  align-items: center;
+  height: 300px;
 }
 
 .card p {
@@ -2230,6 +2248,7 @@ select#input-sort {
   font-size: 20px;
   font-weight: 900;
 }
+
 
 /* best-selling-items end  */
 
@@ -2408,10 +2427,15 @@ button{
 
 /* button contact */
 
-/* .wrapper {
-  height: 100vh;
-  background: #333;
-} */
+.wrapper {
+position: absolute;
+ 
+    z-index: 1000;
+}
+.position-relative{
+      z-index: 900;
+
+}
 
 #main-div {
   position: fixed;
@@ -2430,9 +2454,9 @@ button{
   height: 50px;
   width: 50px;
   font-size: 20px;
-  color: #0064f3;
+  color: #ffffff;
   cursor: pointer;
-  background-color: #fff;
+  background-color: #344E41;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -2447,7 +2471,7 @@ button{
   height: 50px;
   padding: 0 20px;
   color: #fff;
-  background: linear-gradient(90deg, #00a1f5, #0064f3);
+  background-color: #344E41;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   border: 0;
   position: absolute;
@@ -2495,7 +2519,7 @@ button{
   opacity: 0;
   text-decoration: none;
   color: #fff;
-  background-color: #fff;
+  background-color: #344E41;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -2530,16 +2554,35 @@ button{
   -o-transition: 0.4s all cubic-bezier(0, 0.01, 0, 1.27);
 }
 #main-button.open ~ a:nth-of-type(1) {
-  bottom: 60px;
+  /* bottom: 60px; */
+    bottom: 180px; 
+   /* instgram */
 }
 #main-button.open ~ a:nth-of-type(2) {
   bottom: 120px;
+  /* whatsapp */
 }
 #main-button.open ~ a:nth-of-type(3) {
-  bottom: 180px;
+  /* bottom: 180px; */
+      bottom: 60px;
+      /* phone */
+
+}
+/* #main-button.open ~ a:nth-of-type(1) {
+  bottom: 60px;
+} */
+/* #main-button.open ~ a:nth-of-type(2) {
+  bottom: 120px;
+} */
+#main-button.open ~ a:nth-of-type(4) {
+  bottom: 240px;
+    /* bottom: 60px; */
+    /* feacbook */
+
 }
 
 .wave {
+  position: absolute;
   animation-name: wave;
   animation-duration: 1s;
   animation-timing-function: linear;
@@ -2548,10 +2591,10 @@ button{
 
 @keyframes wave {
   0% {
-    box-shadow: 0 0 0px 0px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0px 0px #344E41;
   }
   100% {
-    box-shadow: 0 0 0px 10px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0px 20px rgba(255, 255, 255, 0);
   }
 }
 
@@ -2655,3 +2698,8 @@ footer img {
 }
 
 /* footer */
+
+
+/*  */
+
+
